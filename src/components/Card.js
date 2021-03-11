@@ -1,8 +1,12 @@
 import React from "react";
 
-const Card = ({ image }) => {
+const Card = ({ image, id, isActive, handleClick }) => {
   return (
-    <div className="card">
+    <div
+      id={id}
+      className={!isActive ? "card" : "card-active"}
+      onClick={handleClick}
+    >
       <div className="card-inner">
         <div className="card-front"></div>
         <div className="card-back">

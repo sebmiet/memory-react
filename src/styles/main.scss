@@ -5,21 +5,26 @@
 }
 
 div.app {
+  display: flex;
   min-height: 100vh;
   background: linear-gradient(90deg, rgb(88, 63, 63) 0%, rgb(0, 113, 141) 100%);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 div.cards-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 div.card {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  width: 200px;
-  height: 200px;
-  margin: 10px 10px;
+  width: 125px;
+  height: 125px;
   perspective: 1000px;
 }
 div.card-inner {
@@ -35,7 +40,7 @@ div.card-inner {
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.card:hover .card-inner {
+.card-active .card-inner {
   transform: rotateY(180deg);
 }
 
@@ -62,5 +67,5 @@ div.card-inner {
   transform: rotateY(180deg);
 }
 img {
-  max-height: 150px;
+  max-height: 120px;
 }
