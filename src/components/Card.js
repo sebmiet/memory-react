@@ -1,11 +1,11 @@
 import React from "react";
 
-const Card = ({ image, id, isActive, handleClick }) => {
-  return (
+const Card = ({ image, id, active, handleClick, memorySuccess }) => {
+  return !memorySuccess ? (
     <div
       id={id}
-      className={!isActive ? "card" : "card-active"}
-      onClick={handleClick}
+      className={!active ? "card" : "card-active"}
+      onClick={() => handleClick(id)}
     >
       <div className="card-inner">
         <div className="card-front"></div>
@@ -14,6 +14,8 @@ const Card = ({ image, id, isActive, handleClick }) => {
         </div>
       </div>
     </div>
+  ) : (
+    <div className="card-success"></div>
   );
 };
 export default Card;

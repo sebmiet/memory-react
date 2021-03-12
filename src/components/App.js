@@ -1,5 +1,5 @@
 import Cards from "./Cards";
-function App() {
+function App({ makeCards }) {
   return (
     <div className="app">
       <Cards />
