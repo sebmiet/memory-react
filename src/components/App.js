@@ -1,8 +1,13 @@
 import Cards from "./Cards";
-function App({ makeCards }) {
+import { useState } from "react";
+import GameInfo from "./GameInfo";
+function App() {
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="app">
-      <Cards />
+      <Cards setCounter={setCounter} />
+      <GameInfo counter={counter} />
     </div>
   );
 }

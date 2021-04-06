@@ -25,4 +25,5 @@ const Images = [
   sword,
   tome,
 ];
+
 export default Images;
