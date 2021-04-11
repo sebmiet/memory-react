@@ -25,6 +25,7 @@ div.app {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 div.game-info-container {
@@ -37,8 +38,8 @@ div.game-info-container {
 div.cards-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
@@ -138,5 +139,31 @@ div.card-inner {
 
 img {
   max-height: 120px;
+}
+
+h1.success-msg {
+  position: absolute;
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  top: 1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-radius: 6px;
+  border: 5px solid white;
+  padding: 1rem;
+}
+
+h1.win-msg {
+  position: absolute;
+  font-size: 10rem;
+  font-weight: 700;
+  color: green;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
