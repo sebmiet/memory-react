@@ -5,12 +5,13 @@ import Card from "./Card";
 import Images from "./Images";
 import cardFlip from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/card-flip.wav";
 import ping from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/ping.wav";
+import win from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/win.wav";
 
 const Cards = ({ setCounter, setSuccess, setWin }) => {
   const [activeCards, setActiveCards] = useState([]);
   const [images, setImages] = useState([]);
   const [cards, setCards] = useState(
-    [...Array(8)].map((card, index) => {
+    [...Array(12)].map((card, index) => {
       card = {
         id: index,
         active: false,
@@ -21,6 +22,7 @@ const Cards = ({ setCounter, setSuccess, setWin }) => {
   );
   const [play] = useSound(cardFlip);
   const [playPing] = useSound(ping);
+  const [playWin] = useSound(win);
 
   useEffect(() => {
     imagesDraw(Images);
@@ -90,7 +92,10 @@ const Cards = ({ setCounter, setSuccess, setWin }) => {
 
   const checkForWin = (cards) => {
     let newCards = cards.filter((card) => card.memorySuccess === false);
-    newCards.length === 0 && setWin(true);
+    if (newCards.length === 0) {
+      setWin(true);
+      playWin();
+    }
   };
 
   const checkActiveCards = (activeCards) => {

@@ -71,7 +71,6 @@ div.card-success {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0;
   width: 125px;
   height: 125px;
   -webkit-perspective: 1000px;
