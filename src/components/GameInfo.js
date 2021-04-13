@@ -12,15 +12,32 @@ const GameInfo = ({ counter, success, win }) => {
 
   const handleSuccess = () => {
     const index = Math.floor(Math.random() * messagesSucces.length);
-    return <h1 className="success-msg">{messagesSucces[index]}</h1>;
+    return (
+      <motion.h1
+        animate={{
+          scale: [1.2, 1, 1.2, 1, 1.2],
+        }}
+        transition={{
+          duration: 1,
+        }}
+        style={{ translateX: "-50%" }}
+        className="success-msg"
+      >
+        {messagesSucces[index]}
+      </motion.h1>
+    );
   };
 
   const handleWin = () => {
     return (
       <motion.h1
-        // animate={{
-        //   scale: [1.2, 1, 1.2, 1],
-        // }}
+        animate={{
+          scale: [1.6, 1, 1.6, 1, 1.6],
+        }}
+        transition={{
+          duration: 3,
+        }}
+        style={{ translateY: "-50%", translateX: "-50%" }}
         className="win-msg"
       >
         WYGRAŁEŚ!!!

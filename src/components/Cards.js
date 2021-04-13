@@ -6,6 +6,7 @@ import Images from "./Images";
 import cardFlip from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/card-flip.wav";
 import ping from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/ping.wav";
 import win from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/win.wav";
+import shuffle from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/shuffle.wav";
 
 const Cards = ({ setCounter, setSuccess, setWin }) => {
   const [activeCards, setActiveCards] = useState([]);
@@ -23,6 +24,7 @@ const Cards = ({ setCounter, setSuccess, setWin }) => {
   const [play] = useSound(cardFlip);
   const [playPing] = useSound(ping);
   const [playWin] = useSound(win);
+  const [playStart] = useSound(shuffle);
 
   useEffect(() => {
     imagesDraw(Images);
@@ -103,25 +105,26 @@ const Cards = ({ setCounter, setSuccess, setWin }) => {
       setTimeout(() => {
         checkImages(cards);
       }, 1000);
-    } else return;
+    }
   };
 
   return (
-    <div className="cards-container">
-      {cards.map((card, index) => {
-        console.log(images[index]);
-        return (
-          <Card
-            key={card.id}
-            id={card.id}
-            image={images[index]}
-            active={card.active}
-            handleClick={handleClick}
-            memorySuccess={card.memorySuccess}
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className="cards-container">
+        {cards.map((card, index) => {
+          return (
+            <Card
+              key={card.id}
+              id={card.id}
+              image={images[index]}
+              active={card.active}
+              handleClick={handleClick}
+              memorySuccess={card.memorySuccess}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

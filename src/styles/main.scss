@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,900&display=swap");
+
+$bgColor: #19647e;
+// $bgColor: #208aae;
+$primaryColor: #fb8b24;
+$secondaryColor: #e9f1f7;
+$thirdColor: #ffe548;
+
 * {
   margin: 0;
   padding: 0;
@@ -10,23 +17,24 @@ div.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(90deg, rgb(88, 63, 63) 0%, rgb(0, 113, 141) 100%);
+  // background: linear-gradient(90deg, rgb(88, 63, 63) 0%, rgb(0, 113, 141) 100%);
+  background: $bgColor;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
 }
 div.game-info-container {
-  text-align: right;
+  // text-align: right;
   margin: 2rem;
-  color: white;
+  color: $secondaryColor;
   letter-spacing: 1px;
 }
 div.cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 0.7rem;
+  grid-row-gap: 0.7rem;
 
   // grid-template-rows: 1fr 1fr 1fr;
 }
@@ -38,6 +46,7 @@ div.card {
   width: 125px;
   height: 125px;
   perspective: 1000px;
+  cursor: pointer;
 }
 div.card-success {
   display: flex;
@@ -58,7 +67,7 @@ div.card-inner {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .card-active .card-inner {
   transform: rotateY(180deg);
@@ -66,6 +75,7 @@ div.card-inner {
 
 .card-front,
 .card-back {
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,16 +84,17 @@ div.card-inner {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .card-front {
-  background-color: orange;
-  color: black;
+  background: $primaryColor;
 }
 
 .card-back {
-  background-color: rgb(243, 235, 127);
-  color: white;
+  border: 8px solid $primaryColor;
+  background-color: $secondaryColor;
   transform: rotateY(180deg);
 }
 img {
@@ -91,14 +102,13 @@ img {
 }
 h1.success-msg {
   position: absolute;
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 700;
-  color: white;
+  color: $secondaryColor;
   top: 1rem;
   left: 50%;
-  transform: translate(-50%, 0);
-  border-radius: 6px;
-  border: 5px solid white;
+  // transform: translate(-50%, 0);
+  text-shadow: 2px 2px 4px black;
   padding: 1rem;
 }
 
@@ -106,9 +116,10 @@ h1.win-msg {
   position: absolute;
   font-size: 10rem;
   font-weight: 700;
-  color: green;
+  color: $primaryColor;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px black;
   padding: 1rem;
 }

@@ -1,26 +1,26 @@
 # Installation
 
-    1. Open terminal. Go to directory where you want to install this project:
+    **1. Open terminal. Go to directory where you want to install this project:**
 
-    		example> cd /home/user/workspace/
+    		*example> cd /home/user/workspace/*
 
-    2. Clone this project (or download as zip file):
+    **2. Clone this project (or download as zip file):**
 
-    		> git clone https://github.com/sebmiet/memory-react.git
+    		*> git clone https://github.com/sebmiet/memory-react.git*
 
-    3. Install project (you need npm and nodejs installed in your system):
+    **3. Install project (you need npm and nodejs installed in your system):**
 
-    		> cd /memory-react   //will take you to project folder
+    		*> cd /memory-react   //will take you to project folder*
 
-    		> npm install        //will install node-modules used in project
+    		*> npm install        //will install node-modules used in project*
 
-    4. Start the local server for project:
+    **4. Start the local server for project:**
 
-    		> npm start
+    		*> npm start*
 
-    5. Don't close your terminal, open brwoser and type address:
+    **5. Don't close your terminal, open brwoser and type address:**
 
-    		http://localhost:3000/
+    		*http://localhost:3000/*
 
 # About this PROJECT
 

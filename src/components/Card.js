@@ -2,8 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Card = ({ image, id, active, handleClick, memorySuccess }) => {
-  const delay = 0;
-
   const cardAnimation = {
     initial: {
       x: "100vw",
@@ -15,23 +13,34 @@ const Card = ({ image, id, active, handleClick, memorySuccess }) => {
       scale: 1,
       opacity: 1,
       rotate: [-120, -90, -70, -10, 0],
+      transition: {
+        delay: id * 0.1,
+        duration: 0.5,
+      },
     },
   };
   return !memorySuccess ? (
     <motion.div
       initial="initial"
       animate="animate"
-      transition={{
-        delay: id * 0.1,
-        duration: 0.5,
-      }}
       variants={cardAnimation}
       id={id}
       className={!active ? "card" : "card-active"}
       onClick={() => handleClick(id)}
     >
       <div className="card-inner">
-        <div className="card-front"></div>
+        <motion.div
+          whileHover={{
+            scale: 1.05,
+          }}
+          whileTap={{
+            scale: 0.95,
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+          className="card-front"
+        ></motion.div>
         <div className="card-back">
           <img src={image} alt="img" />
         </div>
