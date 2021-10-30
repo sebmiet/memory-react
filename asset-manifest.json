@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/memory-react/static/css/main.51ff8fb9.chunk.css",
+    "main.js": "/memory-react/static/js/main.7e851f4f.chunk.js",
+    "main.js.map": "/memory-react/static/js/main.7e851f4f.chunk.js.map",
+    "runtime-main.js": "/memory-react/static/js/runtime-main.50f27bed.js",
+    "runtime-main.js.map": "/memory-react/static/js/runtime-main.50f27bed.js.map",
+    "static/js/2.ed78e87b.chunk.js": "/memory-react/static/js/2.ed78e87b.chunk.js",
+    "static/js/2.ed78e87b.chunk.js.map": "/memory-react/static/js/2.ed78e87b.chunk.js.map",
+    "static/js/3.ead19bfc.chunk.js": "/memory-react/static/js/3.ead19bfc.chunk.js",
+    "static/js/3.ead19bfc.chunk.js.map": "/memory-react/static/js/3.ead19bfc.chunk.js.map",
+    "index.html": "/memory-react/index.html",
+    "static/css/main.51ff8fb9.chunk.css.map": "/memory-react/static/css/main.51ff8fb9.chunk.css.map",
+    "static/js/2.ed78e87b.chunk.js.LICENSE.txt": "/memory-react/static/js/2.ed78e87b.chunk.js.LICENSE.txt",
+    "static/js/3.ead19bfc.chunk.js.LICENSE.txt": "/memory-react/static/js/3.ead19bfc.chunk.js.LICENSE.txt",
+    "static/media/armor.d79f4964.png": "/memory-react/static/media/armor.d79f4964.png",
+    "static/media/axe.221677d7.png": "/memory-react/static/media/axe.221677d7.png",
+    "static/media/backpack.ea81c2aa.png": "/memory-react/static/media/backpack.ea81c2aa.png",
+    "static/media/bow.2baca04e.png": "/memory-react/static/media/bow.2baca04e.png",
+    "static/media/card-flip.483663ca.wav": "/memory-react/static/media/card-flip.483663ca.wav",
+    "static/media/coin.1bfa1905.png": "/memory-react/static/media/coin.1bfa1905.png",
+    "static/media/envelope.4d5b921b.png": "/memory-react/static/media/envelope.4d5b921b.png",
+    "static/media/gemBlue.090ad571.png": "/memory-react/static/media/gemBlue.090ad571.png",
+    "static/media/gemGreen.c83b2ab7.png": "/memory-react/static/media/gemGreen.c83b2ab7.png",
+    "static/media/gemRed.c51a6a03.png": "/memory-react/static/media/gemRed.c51a6a03.png",
+    "static/media/ping.d72ff651.wav": "/memory-react/static/media/ping.d72ff651.wav",
+    "static/media/shield.ebbaeb88.png": "/memory-react/static/media/shield.ebbaeb88.png",
+    "static/media/shuffle.475a382d.wav": "/memory-react/static/media/shuffle.475a382d.wav",
+    "static/media/sword.f0d4c1af.png": "/memory-react/static/media/sword.f0d4c1af.png",
+    "static/media/tome.70a1f06d.png": "/memory-react/static/media/tome.70a1f06d.png",
+    "static/media/win.f0241501.wav": "/memory-react/static/media/win.f0241501.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50f27bed.js",
+    "static/js/2.ed78e87b.chunk.js",
+    "static/css/main.51ff8fb9.chunk.css",
+    "static/js/main.7e851f4f.chunk.js"
+  ]
+}
