@@ -3,10 +3,10 @@ import useSound from "use-sound";
 
 import Card from "./Card";
 import Images from "./Images";
-import cardFlip from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/card-flip.wav";
-import ping from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/ping.wav";
-import win from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/win.wav";
-import shuffle from "/home/sebmiet/workspace/CRA/my-apps/memory-react/src/sounds/shuffle.wav";
+import cardFlip from "../sounds/card-flip.wav";
+import ping from "../sounds/ping.wav";
+import win from "../sounds/win.wav";
+import shuffle from "../sounds/shuffle.wav";
 
 const Cards = ({ setCounter, setSuccess, setWin }) => {
   const [activeCards, setActiveCards] = useState([]);
